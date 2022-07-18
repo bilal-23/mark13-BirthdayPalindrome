@@ -4,4 +4,4 @@ Description : An application which takes DOb of user as input, checks if the DOB
 
 Tech Stack : React
 
-Live Project is [here](https://nl3uju.csb.app/).
+Live Project is [here](https://mark13-birthdaypalindromeapp.netlify.app/).
