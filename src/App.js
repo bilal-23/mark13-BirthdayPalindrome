@@ -184,8 +184,8 @@ export default function App() {
       const prevPalindrome = getPrevPalindromeDate(date);
 
       if (nextPalindrome.counter < prevPalindrome.counter) {
-        setError(false);
-        setSuccess(
+        setSuccess(false);
+        setError(
           `OOps! Your birthday is not a palindrome. The nearest palindrome is ${
             nextPalindrome.nextDate.day
           }/${nextPalindrome.nextDate.month}/${
@@ -195,8 +195,8 @@ export default function App() {
           }`
         );
       } else {
-        setError(false);
-        setSuccess(
+        setSuccess(false);
+        setError(
           `OOps! Your birthday is not a palindrome. The nearest palindrome was ${
             prevPalindrome.prevDate.day
           }/${prevPalindrome.prevDate.month}/${
