@@ -15,7 +15,7 @@
 }
 .footer a:hover {
   position: relative;
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
 }
 .footer a::after {
   position: absolute;
@@ -36,4 +36,16 @@
 .socials img {
   filter: invert(1);
   height: 2rem;
+}
+.social_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.social_media img {
+  filter: invert(1);
+  height: 2rem;
+  cursor: pointer;
 }

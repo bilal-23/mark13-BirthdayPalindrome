@@ -15,6 +15,32 @@ export default function Footer() {
             Bilal
           </a>
         </p>
+        <div className={styles.social_media}>
+          <a
+            href="https://twitter.com/bilalmansuri2e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            <img src="https://bilalmansuri.vercel.app/images/twitter.svg" alt="Twitter Icon" />
+          </a>
+          <a
+            href="https://linkedin.com/in/bilalmansuri"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            <img src="https://bilalmansuri.vercel.app/images/linkedin.svg" alt="LinkedIn Icon" />
+          </a>
+          <a
+            href="https://github.com/bilal-23"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            <img src="https://bilalmansuri.vercel.app/images/github.svg" alt="Github Icon" />
+          </a>
+        </div>
       </footer>
     </>
   );

@@ -109,7 +109,7 @@ function getNextDate(date) {
 }
 
 function getNextPalindromeDate(date) {
-  let nextDate = getNextDate(date);
+  let nextDate = (date);
   let counter = 0;
   while (true) {
     counter++;
@@ -186,23 +186,17 @@ export default function App() {
       if (nextPalindrome.counter < prevPalindrome.counter) {
         setSuccess(false);
         setError(
-          `OOps! Your birthday is not a palindrome. The nearest palindrome is ${
-            nextPalindrome.nextDate.day
-          }/${nextPalindrome.nextDate.month}/${
-            nextPalindrome.nextDate.year
-          } and you missed it by ${nextPalindrome.counter} ${
-            nextPalindrome.counter > 1 ? "days" : "day"
+          `OOps! Your birthday is not a palindrome. The nearest palindrome is ${nextPalindrome.nextDate.day
+          }/${nextPalindrome.nextDate.month}/${nextPalindrome.nextDate.year
+          } and you missed it by ${nextPalindrome.counter} ${nextPalindrome.counter > 1 ? "days" : "day"
           }`
         );
       } else {
         setSuccess(false);
         setError(
-          `OOps! Your birthday is not a palindrome. The nearest palindrome was ${
-            prevPalindrome.prevDate.day
-          }/${prevPalindrome.prevDate.month}/${
-            prevPalindrome.prevDate.year
-          } and you missed it by ${prevPalindrome.counter} ${
-            prevPalindrome.counter > 1 ? "days" : "day"
+          `OOps! Your birthday is not a palindrome. The nearest palindrome was ${prevPalindrome.prevDate.day
+          }/${prevPalindrome.prevDate.month}/${prevPalindrome.prevDate.year
+          } and you missed it by ${prevPalindrome.counter} ${prevPalindrome.counter > 1 ? "days" : "day"
           }`
         );
       }
