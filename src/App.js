@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 import "./styles.css";
 
 function reverseString(str) {
@@ -151,9 +152,24 @@ export default function App() {
   const dateRef = useRef();
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (loading) {
+      timer = setTimeout(() => {
+        setLoading(false);
+      }, 2000)
+    }
+
+    return () => {
+      clearTimeout(timer);
+    }
+  }, [loading])
 
   function formSubmitHandelr(e) {
     e.preventDefault();
+    setLoading(true);
     let dateInput = dateRef.current.value;
     if (dateInput === "") {
       setError("Invalid Input");
@@ -204,6 +220,7 @@ export default function App() {
   }
   return (
     <>
+      {loading && <Loader />}
       <main className="App">
         <header className="header">
           <h1 className="heading">Palindrome Birthday</h1>
@@ -219,10 +236,10 @@ export default function App() {
             </button>
           </div>
         </form>
-        <div className="output">
+        {!loading && <div className="output">
           {success && !error && <p className="success">{success}</p>}
           {!success && error && <p className="error">{error}</p>}
-        </div>
+        </div>}
       </main>
       <Footer />
     </>
